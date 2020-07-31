@@ -5,11 +5,12 @@ import Realtime from '../components/realtime/container'
 import Dashboard from '../components/dashboard/container'
 Vue.use(VueRouter)
 
-  const routes = [  
+const routes = [
   {
     path: '/realtime',
     name: 'Realtime',
-    component: Realtime
+    component: Realtime,
+    meta: { title: '股份趋势' }
   },
   {
     path: '/dashboard',
