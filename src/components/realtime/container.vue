@@ -2,7 +2,7 @@
   <v-data-table
     :headers="headers"
     :items="desserts"
-    :items-per-page="15"
+    :items-per-page="10"
     :sort-by="[]"
     :sort-desc="[false, true]"
     multi-sort

@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app>
       <v-list dense>
-        <v-list-item link @click="Index">
+        <v-list-item to="/dashboard" @click="Index">
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -10,7 +10,7 @@
             <v-list-item-title>首页</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link @click="realtime">
+        <v-list-item to="/realtime">
           <v-list-item-action>
             <v-icon>mdi-trending-up</v-icon>
           </v-list-item-action>
@@ -28,7 +28,18 @@
 
     <v-main>
       <v-container class="fill-height" fluid>
-        
+        <v-row align="center" justify="center">
+          <v-col class="text-center">
+            <v-tooltip left>
+              <template v-slot:activator="{ on }">
+                <v-btn :href="source" icon large target="_blank" v-on="on">
+                  <v-icon large>mdi-code-tags</v-icon>
+                </v-btn>
+              </template>
+              <span>Source</span>
+            </v-tooltip>
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
     <v-footer color="indigo" app>
@@ -45,8 +56,7 @@ export default {
   data: () => ({
     drawer: null,
   }),
-  created() {
-  },
+  created() {},
   methods: {
     Index() {
       if (window.history.length <= 1) {

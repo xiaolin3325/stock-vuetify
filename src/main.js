@@ -6,8 +6,10 @@ import axios from 'axios'
 import Vueaxios from 'vue-axios'
 import global from './config/appconfig'
 import vuetify from '@/plugins/vuetify'
+import VueRouter from 'vue-router'
 
 Vue.use(Vuetify)
+Vue.use(VueRouter)
 Vue.config.productionTip = false
 Vue.use(Vueaxios,axios)
 Vue.prototype.$ajax = axios
